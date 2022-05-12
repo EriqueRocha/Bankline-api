@@ -2,12 +2,26 @@ package com.eriquerocha.banklineapi.model;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tab_movimentacao")
 public class Movimentação {
 
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private LocalDateTime dataHora;
 	private String descrição;
 	private Double valor;
+	
+	@Enumerated(EnumType.STRING)
 	private MovimentacaoTipo tipo;
 	
 	public Integer getId() {
