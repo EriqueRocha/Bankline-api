@@ -1,21 +1,18 @@
 package com.eriquerocha.banklineapi.dto;
 
-import javax.persistence.Column;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
-
 import com.eriquerocha.banklineapi.model.MovimentacaoTipo;
 
 public class NovaMovimentacao {
-	private String descrição;
+	private String descricao;
 	private Double valor;
 	private MovimentacaoTipo tipo;
+	private Integer idConta;
 	
-	public String getDescrição() {
-		return descrição;
+	public String getDescricao() {
+		return descricao;
 	}
-	public void setDescrição(String descrição) {
-		this.descrição = descrição;
+	public void setDescrição(String descricao) {
+		this.descricao = descricao;
 	}
 	public Double getValor() {
 		return valor;
@@ -35,6 +32,6 @@ public class NovaMovimentacao {
 	public void setIdConta(Integer idConta) {
 		this.idConta = idConta;
 	}
-	private Integer idConta;
+	
 
 }
